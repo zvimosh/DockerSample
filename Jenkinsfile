@@ -21,7 +21,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "nohup node index.js & && sleep 90"
+                sh "nohup node index.js &"
+                sh 'sleep 90'
    
             }
         }
