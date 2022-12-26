@@ -12,10 +12,10 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'export APP=DEVELOP; \ 
+                sh '''export APP=DEVELOP; \ 
                     npm install; \
                     ls; \
-                    echo $APP;'
+                    echo $APP;'''
                
             }
         }
