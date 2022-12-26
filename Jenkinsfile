@@ -12,6 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                echo 'Lidor was here'
             }
         }
         stage('Deploy') {
