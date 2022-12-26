@@ -15,8 +15,7 @@ pipeline {
                 sh ''' export APP=DEVELOP;  
                     npm install;
                     ls;
-                    echo $APP;
-                    exit 1 '''
+                    echo $APP; '''
                
             }
         }
@@ -36,7 +35,8 @@ pipeline {
     }
     post {
         always {
-             chuckNorris()   
+             chuckNorris()  
+             slackSend channel: '#general', message: 'build Success' 
         }
     }
 }
