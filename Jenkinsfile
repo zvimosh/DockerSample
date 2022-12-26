@@ -1,7 +1,7 @@
 pipeline {
         agent {
   label 'centos7'
-} 
+        } 
 
     stages {
         stage('Checkout Code') {
@@ -38,9 +38,6 @@ pipeline {
              chuckNorris()  
               
             }
-        regression {
-            slackSend channel: '#general', message: 'its getting worse'
-         }
         aborted {
              slackSend channel: '#general', message: 'build was aborted'
          }
