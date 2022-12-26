@@ -26,9 +26,9 @@ pipeline {
    
             }
         }
-        stage('Deploy') {
+        stage('Package') {
             steps {
-                echo 'Deploying....'
+                sh "tar -czvf package-$BUILD_ID.tar.gz *"
             }
         }
     }
