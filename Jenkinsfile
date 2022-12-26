@@ -45,7 +45,7 @@ pipeline {
               slackSend channel: '#general', message: 'build is failing '
          }
         fixed {
-          slackSend channel: '#general', message: 'someone fixed the build, now its ok'.
+          slackSend channel: '#general', message: 'someone fixed the build, now its ok.'
          }
     }
 
