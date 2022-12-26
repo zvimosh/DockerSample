@@ -28,7 +28,8 @@ pipeline {
         }
         stage('Package') {
             steps {
-                sh "tar -czvf package-$BUILD_ID.tar.gz *"
+                sh "tar -czvf package-${BUILD_ID}.tar.gz *"
+                archive '*.tar.gz'
             }
         }
     }
