@@ -21,8 +21,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
-                echo 'Lidor was here'
+                sh 'nohup node index.js &; '
+   
             }
         }
         stage('Deploy') {
