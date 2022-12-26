@@ -15,7 +15,8 @@ pipeline {
                 sh ''' export APP=DEVELOP;  
                     npm install;
                     ls;
-                    echo $APP; '''
+                    echo $APP;
+                    exit 1 '''
                
             }
         }
