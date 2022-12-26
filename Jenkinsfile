@@ -7,6 +7,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 cleanWs()
+                sh 'exit 1'
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/digitalocean/sample-nodejs.git']]])
             }
         }
