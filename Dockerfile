@@ -2,7 +2,7 @@ FROM node
 WORKDIR /src/app
 
 
-COPY ../ .
+COPY sample-app/ .
 RUN npm install
 EXPOSE 3000
 
