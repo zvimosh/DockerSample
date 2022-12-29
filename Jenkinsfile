@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                    sh '''docker build . -t lidorlg/node:${BUILD_ID} '''
+                    sh ''' cd devops && docker build . -t lidorlg/node:${BUILD_ID} '''
                
             }
         }
